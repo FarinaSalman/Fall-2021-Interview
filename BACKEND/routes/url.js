@@ -52,15 +52,18 @@ router.post('/encode', async (req, res) => {
 
 // @route   POST /api/decode
 // @desc    Decodes a shortened URL to its original URL
-router.post('/decode', async (res, req) => {
-    const {shortUrl} = req.body;
+router.post('/decode', async (req, res) => {
+    const { shortUrl } = req.body;
     const baseUrl = config.get('baseUrl');
 
     // Check base url
     if (!validUrl.isUri(baseUrl)) {
         return res.status(401).json('Invalid base url');
     }
-    
+
+    // Create url code
+    const urlCode = shortid.generate()
+
     // Check short url
     if (validUrl.isUri(shortUrl)) {
         try {
@@ -69,7 +72,7 @@ router.post('/decode', async (res, req) => {
             if (url) {
                 res.json(url);
             } else {
-                res.status(404).json('url not found');
+                res.status(404).json('short url not found');
             }
         } catch (err) {
             console.error(err);
