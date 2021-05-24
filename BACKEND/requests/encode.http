@@ -1,0 +1,8 @@
+// Test for encode endpoint
+
+POST http://localhost:5000/api/url/encode
+Content-Type: application/json
+
+{
+  "longUrl": "https://github.com/FarinaSalman/Fall-2021-Interview"
+}
