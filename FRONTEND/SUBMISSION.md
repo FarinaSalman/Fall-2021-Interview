@@ -1,19 +1,26 @@
 ## Repository: 
 
 ```
-PLACE_REPO_LINK_HERE
+https://github.com/FarinaSalman/fall-2021-interview-frontend
 ```
 
 ## Deployed App URL: 
 
 ```
-PLACE_LINK_TO_ACCESS_APP
+https://farinasalman.github.io/fall-2021-interview-frontend/
 ```
 
 ## Run Instructions
 
-ADD_INSTRUCTIONS_ON_HOW_TO_RUN_YOUR_APP
+To run the application, you can either visit the link above or run it on your local machine following the instructions below.
+
+Make sure you have NodeJS installed. To check, run the command:
+```
+node -v
+```
+
+Run the command ```npm start``` to start the application. The application should open at ```http://localhost:3000```
 
 ## Additional Information
 
-ANYTHING_ELSE_YOU_WOULD_LIKE_TO_SHARE
+This part is not completed. The styling is still incomplete at the time of submission.
