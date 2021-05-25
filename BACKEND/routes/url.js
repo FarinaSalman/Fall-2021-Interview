@@ -39,7 +39,7 @@ router.post('/encode', async (req, res) => {
 
                 await url.save();
                 
-                res.json(url);
+                res.status(200).json(url);
             }
         } catch (err) {
             console.error(err);
@@ -70,7 +70,7 @@ router.post('/decode', async (req, res) => {
             let url = await Url.findOne({ shortUrl });
 
             if (url) {
-                res.json(url);
+                res.status(200).json(url);
             } else {
                 res.status(404).json('short url not found');
             }
